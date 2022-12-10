@@ -172,7 +172,7 @@ public class MoMoPayment: NSObject {
             
         }
         
-        var appSource:String = paymentInfo?["applink"]
+        var appSource:String = paymentInfo?["applink"] as! String
         
         // appSource = appSource.removingPercentEncoding! as String
         // appSource = appSource.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
