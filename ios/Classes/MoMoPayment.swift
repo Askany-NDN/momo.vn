@@ -172,10 +172,10 @@ public class MoMoPayment: NSObject {
             
         }
         
-        var appSource:String = "\(MOMO_APP_BUNDLE_ID)://?\(inputParams)"
+        var appSource:String = paymentInfo?["applink"]
         
-        appSource = appSource.removingPercentEncoding! as String
-        appSource = appSource.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
+        // appSource = appSource.removingPercentEncoding! as String
+        // appSource = appSource.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
 
         print("<MoMoPay> open url \(appSource)")
 
